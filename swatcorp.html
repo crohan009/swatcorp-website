@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SWAT Corp</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #000000;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        header img {
+            max-width: 250px;
+            height: auto;
+        }
+
+        .hero {
+            background-color: #2b323f;
+            color: white;
+            text-align: center;
+            padding: 100px 20px;
+        }
+
+        .section {
+            padding: 50px 20px;
+            text-align: center;
+        }
+
+        .section:nth-child(even) {
+            background-color: #F5F5F5;
+        }
+
+        footer {
+            background-color: #0D1B2A;
+            color: #fff;
+            text-align: center;
+            padding: 10px 20px;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #000000;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #530606;
+        }
+
+        /* Ventures Section */
+        .ventures-container {
+            display: flex;
+            justify-content: center;
+            align-items: centers;
+            overflow-x: auto;
+            gap: 20px;
+            padding: 20px;
+            scroll-behavior: smooth;
+        }
+
+        .venture-card {
+            flex: 0 0 auto;
+            width: 300px;
+            height: 200px;
+            background-color: #000000;
+            color: #fff;
+            border-radius: 15px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+            text-decoration: none;
+        }
+
+        .venture-card:hover {
+            width: 600px;
+            height: 400px;
+            background-color: #000000;
+        }
+
+        .venture-card h3 {
+            margin: 0;
+            padding: 10px;
+        }
+
+        .venture-card p {
+            display: none;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .venture-card:hover p {
+            display: block;
+        }
+
+        .venture-card img.venture-logo {
+            max-width: 150px; 
+            height: auto;
+            margin-bottom: 10px;
+        }
+
+        #contact a {
+            color: black; 
+            text-decoration: underline; 
+        }
+
+        #contact a:hover {
+            color: #d7890b; 
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img src="logos/swat_logo-no-background.png" alt="SWAT Corp Logo">
+        <h1>SWAT Corp</h1>
+    </header>
+
+    <section class="section" id="about">
+        <h2>We are dedicated to incubating cutting-edge ventures that redefine the status quo.</h2>
+    </section>
+
+    <section class="section" id="ventures">
+        <h2>Ventures</h2>
+        <p>Explore our portfolio of projects and businesses driving innovation worldwide.</p>
+        <div class="ventures-container">
+            <a href="https://www.calyxcorp.shop/" target="_blank" class="venture-card">
+                <div>
+                    <img src="logos/calyx_logo.png" alt="Calyx Logo" class="venture-logo">
+                    <h3>Calyx</h3>
+                    <p>Manufacturing high quality training gear.</p>
+                </div>
+            </a>
+            <a href="https://github.com/crohan009/calpal_app" class="venture-card">
+                <div>
+                    <img src="logos/calpal_logo_light.png" alt="CalPal Logo" class="venture-logo">
+                    <h3>CalPal</h3>
+                    <p>A mobile calisthenics pal.</p>
+                </div>
+            </a>
+            <a href="#" class="venture-card">
+                <div>
+                    <img src="logos/touchbase_logo_no_text.png" alt="TouchBase Logo" class="venture-logo">
+                    <h3>TouchBase</h3>
+                    <p>Personal Cognitive Assistant.</p>
+                </div>
+            </a>
+        </div>        
+    </section>
+
+    <section class="section" id="contact">
+        <h2>Contact Us</h2>
+        <p>Have questions or ideas?  <a href="mailto:crohan@swatcorp.com">Reach out to us!</a> .</p> 
+    </section>
+
+    <footer>
+        <p>&copy; 2025 SWAT Corp Pvt Ltd. All rights reserved.</p>
+    </footer>
+</body>
+</html>
