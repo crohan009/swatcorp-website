@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #030712;
+  --bg-secondary: #111827;
+  --bg-surface: #1F2937;
+  --bg-glass: rgba(17, 24, 39, 0.7);
+  --text-primary: #F9FAFB;
+  --text-secondary: #9CA3AF;
+  --text-accent: #60A5FA;
+  --brand-primary: #3B82F6;
+  --brand-secondary: #10B981;
+  --brand-purple: #8B5CF6;
+  --brand-cyan: #06B6D4;
+  --border-color: rgba(255, 255, 255, 0.1);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--brand-primary);
+  color: white;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--brand-primary);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--brand-cyan);
+}
+
+.font-syne {
+  font-family: 'Syne', sans-serif;
+}
+
+.glass-effect {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-color);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--brand-primary), var(--brand-cyan));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.glow-effect {
+  box-shadow: 0 0 30px rgba(59, 130, 246, 0.4);
+}
+
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0) }
+  10% { transform: translate(-5%, -10%) }
+  20% { transform: translate(-15%, 5%) }
+  30% { transform: translate(7%, -25%) }
+  40% { transform: translate(-5%, 25%) }
+  50% { transform: translate(-15%, 10%) }
+  60% { transform: translate(15%, 0%) }
+  70% { transform: translate(0%, 15%) }
+  80% { transform: translate(3%, 35%) }
+  90% { transform: translate(-10%, 10%) }
+}
+
+.noise-overlay::before {
+  content: '';
+  position: fixed;
+  top: -50%;
+  left: -50%;
+  right: -50%;
+  bottom: -50%;
+  width: 200%;
+  height: 200%;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  opacity: 0.03;
+  animation: grain 8s steps(10) infinite;
+  z-index: 1000;
+}
