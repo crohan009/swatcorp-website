@@ -1,0 +1,153 @@
+{
+  "project_name": "SWAT Corp Redesign",
+  "theme": "Dark Deep-Tech",
+  "design_philosophy": {
+    "core_concept": "Incubating the Future",
+    "vibe": "Deep Tech, Mysterious, High-Performance, Innovative",
+    "visual_style": "Minimalist Dark Mode, Glassmorphism, Particle Effects, Neon Accents"
+  },
+  "typography": {
+    "font_family_heading": "Syne",
+    "font_family_body": "Inter",
+    "heading_style": "tracking-tight font-bold uppercase",
+    "body_style": "leading-relaxed text-gray-400",
+    "instructions": "Use 'Syne' for all major headings (H1, H2, H3) to give a futuristic feel. Use 'Inter' for body text for readability. Ensure high contrast."
+  },
+  "colors": {
+    "background": {
+      "primary": "#030712",
+      "secondary": "#111827",
+      "surface": "#1F2937",
+      "glass": "rgba(17, 24, 39, 0.7)"
+    },
+    "text": {
+      "primary": "#F9FAFB",
+      "secondary": "#9CA3AF",
+      "accent": "#60A5FA"
+    },
+    "brand": {
+      "primary": "#3B82F6",
+      "secondary": "#10B981",
+      "accent_purple": "#8B5CF6",
+      "accent_cyan": "#06B6D4"
+    },
+    "utility": {
+      "border": "rgba(255, 255, 255, 0.1)",
+      "hover": "rgba(255, 255, 255, 0.05)"
+    }
+  },
+  "layout": {
+    "grid_system": "Use CSS Grid with 'bento' style layouts for portfolios. 12-column grid for main pages.",
+    "spacing": "Generous spacing. Use p-12, p-24 for section padding.",
+    "container": "max-w-7xl mx-auto px-4 sm:px-6 lg:px-8",
+    "z_index": {
+      "background": -10,
+      "particles": -5,
+      "content": 10,
+      "overlay": 40,
+      "header": 50,
+      "modal": 100
+    }
+  },
+  "components": {
+    "header": {
+      "type": "Floating Glass Header",
+      "style": "backdrop-blur-md border-b border-white/10 fixed w-full top-0 z-50 bg-black/50",
+      "elements": ["Logo (Left)", "Nav Links (Center)", "Contact CTA (Right)"]
+    },
+    "hero": {
+      "type": "Immersive Particle Hero",
+      "elements": [
+        "Full-screen height (min-h-screen)",
+        "Animated Particle Background (react-particles)",
+        "Bold Headline: 'Incubating the Future'",
+        "Subtext: 'Redefining the status quo through cutting-edge ventures'",
+        "Primary CTA: 'Explore Ventures'"
+      ]
+    },
+    "venture_card": {
+      "type": "Hover Reveal Card",
+      "style": "group relative overflow-hidden rounded-xl bg-gray-900 border border-white/10 transition-all duration-500 hover:border-blue-500/50",
+      "interaction": "On hover: Scale image slightly, reveal detailed description, glow effect."
+    },
+    "buttons": {
+      "primary": "bg-blue-600 hover:bg-blue-500 text-white rounded-full px-8 py-3 font-medium transition-all shadow-[0_0_20px_rgba(59,130,246,0.5)] hover:shadow-[0_0_30px_rgba(59,130,246,0.7)]",
+      "secondary": "border border-white/20 hover:bg-white/10 text-white rounded-full px-8 py-3 transition-all"
+    },
+    "contact_modal": {
+      "type": "Dialog (Shadcn)",
+      "trigger": "Button in Header/Footer",
+      "content": "Simple form (Name, Email, Message) sending to crohan@swat-corp.com"
+    }
+  },
+  "assets": {
+    "images": {
+      "hero_bg": {
+        "url": "https://images.unsplash.com/photo-1664854953181-b12e6dda8b7c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA0MTJ8MHwxfHNlYXJjaHwxfHxBYnN0cmFjdCUyMGRhcmslMjBkYXRhJTIwbmV0d29yayUyMHBhcnRpY2xlc3xlbnwwfHx8fDE3NzM3MTc3MjV8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "Abstract digital network particles"
+      },
+      "ivy_venture": {
+        "url": "https://images.unsplash.com/photo-1764336312138-14a5368a6cd3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1NTJ8MHwxfHNlYXJjaHwxfHxBcnRpZmljaWFsJTIwaW50ZWxsaWdlbmNlJTIwYnJhaW4lMjBuZXVyYWwlMjBuZXR3b3JrJTIwYmx1ZXxlbnwwfHx8fDE3NzM3MTc3MjZ8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "IVY - AI Brain"
+      },
+      "calyx_venture": {
+        "url": "https://images.unsplash.com/photo-1766389088588-21e13679ffa3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1ODR8MHwxfHNlYXJjaHwzfHxGdXR1cmlzdGljJTIwYXRobGV0ZSUyMHRyYWluaW5nJTIwZGFyayUyMGxpZ2h0aW5nfGVufDB8fHx8MTc3MzcxNzcyN3ww&ixlib=rb-4.1.0&q=85",
+        "alt": "Calyx - Future Athlete"
+      },
+      "calpal_venture": {
+        "url": "https://images.unsplash.com/photo-1663153206192-6d0e4c9570dd?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjY2NzF8MHwxfHNlYXJjaHwyfHxNb2JpbGUlMjBhcHAlMjBpbnRlcmZhY2UlMjBob2xvZ3JhbXxlbnwwfHx8fDE3NzM3MTc3Mjd8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "CalPal - Mobile Interface"
+      },
+      "touchbase_venture": {
+        "url": "https://images.unsplash.com/photo-1679210208184-44fd41b1ab87?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxODh8MHwxfHNlYXJjaHwzfHxGdXR1cmlzdGljJTIwZGlnaXRhbCUyMGFzc2lzdGFudCUyMGhvbG9ncmFtJTIwYmx1ZXxlbnwwfHx8fDE3NzM3MTc3MzZ8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "TouchBase - Digital Assistant"
+      },
+      "team_placeholder": {
+        "url": "https://images.unsplash.com/photo-1557844681-b0da6a516dc9?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHw0fHxEaXZlcnNlJTIwY29ycG9yYXRlJTIwdGVhbSUyMHNpbGhvdWV0dGUlMjBkYXJrJTIwYmFja2dyb3VuZHxlbnwwfHx8fDE3NzM3MTc3Mjl8MA&ixlib=rb-4.1.0&q=85",
+        "alt": "Team Silhouette"
+      },
+      "logos": {
+        "swat_main": "/logos/swat_logo-no-background.png",
+        "ivy": "/logos/ivy_logo.png",
+        "calyx": "/logos/calyx_logo.png",
+        "calpal": "/logos/calpal_logo_light.png",
+        "touchbase": "/logos/touchbase_logo_no_text.png"
+      }
+    },
+    "icons": "Use 'lucide-react' for UI icons (Menu, X, ArrowRight, Mail, etc.)"
+  },
+  "animation_guidelines": {
+    "library": "framer-motion",
+    "particles": "react-particles / tsparticles",
+    "transitions": {
+      "page_load": "Fade in with staggered children",
+      "hover": "Scale 1.05, Glow opacity increase",
+      "scroll": "Parallax effect on background elements"
+    }
+  },
+  "instructions_to_main_agent": [
+    "1. INITIALIZATION: You are starting from scratch in terms of React code. Create a standard Vite + React + Tailwind project structure inside /app/frontend (if not exists) or root.",
+    "2. ASSETS: Move existing logos from /app/logos to the public/assets folder of the new React app.",
+    "3. FONTS: Import 'Syne' and 'Inter' from Google Fonts in index.css.",
+    "4. ROUTING: Implement React Router with pages: Home, About, Team, Ventures (Portfolio), Contact.",
+    "5. STATE: Use simple state for Contact Modal visibility.",
+    "6. PARTICLES: Install 'react-particles' and 'tsparticles' and create a 'ParticlesBackground' component.",
+    "7. DATA: Create a 'ventures.json' or constant array with the venture data provided (IVY, Calyx, CalPal, TouchBase).",
+    "8. CONTACT: The contact form must post to the FastAPI backend (assume endpoint /api/contact exists or mock it for now). Email: crohan@swat-corp.com.",
+    "9. TAILWIND: Configure tailwind.config.js with the custom colors defined above.",
+    "10. TESTING: Add data-testid to all interactive elements."
+  ],
+  "universal_guidelines": [
+    "Dark colors look good when used independently without gradients. DO NOT use dark colors as gradients",
+    "Don't make generic centered layouts, simplistic gradients, and uniform styling.",
+    "Create depth through layered design elements with z-index hierarchy",
+    "Use glass-morphism effects with backdrop filters (12-24px blur)",
+    "You MUST NOT apply universal transition. Eg: transition: all. This results in breaking transforms. Always add transitions for specific interactive elements like button, input excluding transforms",
+    "You MUST NOT center align the app container, ie do not add .App { text-align: center; } in the css file. This disrupts the human natural reading flow of text",
+    "Always use modern button styles like pill-shaped, or sharp button with interaction animations & color relevant to the app style",
+    "Every interaction needs micro-animations - hover states, transitions, parallax effects, and entrance animations. Static = dead.",
+    "Use 2-3x more spacing than feels comfortable. Cramped designs look cheap.",
+    "Subtle grain textures, noise overlays, custom cursors, selection states, and loading animations: separates good from extraordinary.",
+    "Main agent relies on these image URLs. Missing categories (especially sponsor logos) = main agent will use placeholder text which is FORBIDDEN"
+  ]
+}
