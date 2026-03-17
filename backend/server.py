@@ -60,12 +60,12 @@ async def submit_contact(form: ContactForm):
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/api/contacts")
-async def get_contacts():
+async def get_contacts(limit: int = 100, skip: int = 0):
     contacts = []
-    cursor = db.contacts.find({}, {"_id": 0})
+    cursor = db.contacts.find({}, {"_id": 0}).sort("created_at", -1).skip(skip).limit(limit)
     async for contact in cursor:
         contacts.append(contact)
-    return {"contacts": contacts}
+    return {"contacts": contacts, "limit": limit, "skip": skip}
 
 if __name__ == "__main__":
     import uvicorn
