@@ -1,2 +1,3 @@
 # swatcorp-website
-SWAT Corp Pvt Ltd
+SWAT Corp (OPC) Private Limited
+swatcorp.tech
